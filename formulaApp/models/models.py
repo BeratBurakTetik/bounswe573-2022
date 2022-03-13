@@ -15,11 +15,17 @@ class Driver(models.Model):
     nationality = models.CharField(max_length=40)
     url = models.CharField(max_length=100)
 
+    def __str__(self):
+        return self.driverRef
+
 class Constructor(models.Model):
     constructorRef = models.CharField(max_length=50, null=True)
     name = models.CharField(max_length=40)
     nationality = models.CharField(max_length=40)
     url = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
 
 class Circuit(models.Model):
     circuitRef = models.CharField(max_length=50 ,null=True)
@@ -30,5 +36,8 @@ class Circuit(models.Model):
     lng = models.DecimalField(decimal_places=5 , max_digits=10,null=True, blank=True)
     alt = models.DecimalField(decimal_places=5 , max_digits=10,null=True, blank=True)
     url = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
 
 
