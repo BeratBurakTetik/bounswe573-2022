@@ -6,3 +6,6 @@ from .models import Circuit
 def circuit_list(request):
     circuits = Circuit.objects.all()
     return render(request, 'models/circuit_list.html', {'circuits':circuits})
+
+def home(request):
+    return render(request, "models/home.html",{})
