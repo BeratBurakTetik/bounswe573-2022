@@ -6,12 +6,12 @@
         </header>
         
         {% for driver in drivers %}
-            <article>
-                <h2>{{driver.number}} -- {{driver.code}} -- {{ driver.forename }} {{driver.surname}}</h2>
-                <p>Nationality: {{ driver.nationality }}</p>
-                <p>Date of Birth: {{ driver.dob }}</p>
-                <p><a href="{{driver.url}}">{{ driver.url }}</a><p>
-                <p>---------------------------------</p>
-            </article>
+        <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;" alt="Card image cap">
+            <h5 class="card-title">{{driver.number}} -- {{driver.code}} -- {{ driver.forename }} {{driver.surname}}</h5>
+            <div class="card-body">
+              <p class="card-text">Nationality: {{driver.nationality}}</p>
+              <p class="card-text">Date of Birth: {{ driver.dob }}</p>
+            </div>
+          </div>
         {% endfor %}
     {% endblock %}

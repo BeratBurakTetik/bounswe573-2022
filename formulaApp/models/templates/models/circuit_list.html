@@ -4,12 +4,18 @@
         <header>
             <h1>Circuits</h1>
         </header>
+        <div class="card-columns">
         {% for circuit in circuits %}
-            <article>
-                <h2>{{ circuit.name }}</h2>
-                <p>{{ circuit.location }}</p>
-                <p>{{ circuit.country }}</p>
-                <p><a href="{{circuit.url}}">{{ circuit.url }}</a><p>
-            </article>
+        <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;" alt="Card image cap">
+            <h5 class="card-title">{{circuit.name}}</h5>
+            <div class="card-body">
+              <p class="card-text">Country: {{circuit.country}}</p>
+              <p class="card-text">Location: {{circuit.location}}</p>
+            </div>
+          </div>
         {% endfor %}
+    </div>
     {% endblock %}
+
+
+    

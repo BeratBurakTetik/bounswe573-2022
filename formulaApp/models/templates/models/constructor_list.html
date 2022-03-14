@@ -4,12 +4,24 @@
         <header>
             <h1>Constructors</h1>
         </header>
-        
         {% for constructor in constructors %}
-            <article>
-                <h2>{{ constructor.name }}</h2>
-                <p>{{ constructor.nationality }}</p>
-                <p><a href="{{constructor.url}}">{{ constructor.url }}</a><p>
-            </article>
+        <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;" alt="Card image cap">
+            <h5 class="card-title">{{constructor.name}}</h5>
+            <div class="card-body">
+              <p class="card-text">Nationality: {{constructor.nationality}}</p>
+            </div>
+          </div>
         {% endfor %}
+        <div class="card-columns">
     {% endblock %}
+
+
+  
+
+    <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;" alt="Card image cap">
+        <h5 class="card-title">{{circuit.name}}</h5>
+        <div class="card-body">
+          <p class="card-text">Country: {{circuit.country}}</p>
+          <p class="card-text">Location: {{circuit.location}}</p>
+        </div>
+      </div>
