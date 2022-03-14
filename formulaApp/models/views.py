@@ -1,6 +1,8 @@
+from urllib import request
 from django.shortcuts import render
 from .models import Circuit
 from .models import Constructor
+from .models import Driver
 
 # Create your views here.
 
@@ -14,3 +16,7 @@ def home(request):
 def constructor_list(request):
     constructors = Constructor.objects.all()
     return render(request, 'models/constructor_list.html',{'constructors':constructors})
+
+def driver_list(request):
+    drivers = Driver.objects.all()
+    return render(request,'models/driver_list.html',{'drivers':drivers})

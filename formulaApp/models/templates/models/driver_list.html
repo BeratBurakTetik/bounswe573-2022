@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formula One</title>
+    </head>
+    <body>
+        <header>
+            <h1>Drivers</h1>
+        </header>
+        
+        {% for driver in drivers %}
+            <article>
+                <h2>{{driver.number}} -- {{driver.code}} -- {{ driver.forename }} {{driver.surname}}</h2>
+                <p>Nationality: {{ driver.nationality }}</p>
+                <p>Date of Birth: {{ driver.dob }}</p>
+                <p><a href="{{driver.url}}">{{ driver.url }}</a><p>
+                <p>---------------------------------</p>
+            </article>
+        {% endfor %}
+    </body>
+</html>
