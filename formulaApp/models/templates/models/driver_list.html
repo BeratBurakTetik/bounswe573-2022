@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Formula One</title>
-    </head>
-    <body>
+{% extends 'models/base.html' %}
+    
+    {% block content %}
         <header>
             <h1>Drivers</h1>
         </header>
@@ -17,5 +14,4 @@
                 <p>---------------------------------</p>
             </article>
         {% endfor %}
-    </body>
-</html>
+    {% endblock %}

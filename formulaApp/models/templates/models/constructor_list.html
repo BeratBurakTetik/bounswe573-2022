@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Formula One</title>
-    </head>
-    <body>
+{% extends 'models/base.html' %}
+    
+    {% block content %}
         <header>
             <h1>Constructors</h1>
         </header>
@@ -15,5 +12,4 @@
                 <p><a href="{{constructor.url}}">{{ constructor.url }}</a><p>
             </article>
         {% endfor %}
-    </body>
-</html>
+    {% endblock %}

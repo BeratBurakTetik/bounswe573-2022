@@ -1,13 +1,9 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Formula One</title>
-    </head>
-    <body>
+{% extends 'models/base.html' %}
+    
+    {% block content %}
         <header>
             <h1>Circuits</h1>
         </header>
-        
         {% for circuit in circuits %}
             <article>
                 <h2>{{ circuit.name }}</h2>
@@ -16,5 +12,4 @@
                 <p><a href="{{circuit.url}}">{{ circuit.url }}</a><p>
             </article>
         {% endfor %}
-    </body>
-</html>
+    {% endblock %}
